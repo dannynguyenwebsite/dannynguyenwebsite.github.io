@@ -1,0 +1,151 @@
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700);
+
+
+a.nav-link:hover{color: red !important; }
+
+/*keep video without scolling to see controls*/
+
+
+
+/*when hover over, black square of opacity .5 with title of project
+extends div and shifts everything down
+
+behind the popup is white background with a black border logo with title
+find out add script from javascript file instead having it in html page
+*/
+
+/*live instagram feed
+
+https://medium.com/@sunilsandhu/the-simplest-way-to-add-your-very-own-custom-instagram-feed-to-your-site-c63f129140dc
+
+*/
+
+
+
+/*end of instagram css*/
+
+
+ .container-fluid video{
+    width:100%;
+    height:100%;
+     
+} 
+.container-fluid{
+    overflow: hidden;
+
+ }
+ 
+.navbar{
+    border-bottom-color: black;
+    border-width: 1px;
+    border-bottom-style: solid;
+    
+    position: sticky;
+}
+
+#aboutme{
+    padding: 65px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+#contactme{
+    padding: 65px;
+}
+#projects{
+    padding: 65px;
+}
+
+img {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+/* The Close Button */
+[class^=close] {
+    position: absolute;
+    top: 50px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+[class^=close]:hover, [class^=close]:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Add Animation */
+.modal-content, [id^=caption] {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+
+/* Caption of Modal Image */
+[id^=caption] {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+
+  
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+
+
+@media (max-width: 768px){
+
+    #aboutme{
+        padding-left:20px;
+        padding-right: 20px;
+       
+    }
+}
+@media (max-width: 576px){
+
+    #aboutme{
+        padding-left: 20;
+        padding-right: 20;
+      
+    }
+}
