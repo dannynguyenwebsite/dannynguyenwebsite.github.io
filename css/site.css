@@ -4,13 +4,16 @@
 
 a.nav-link:hover{color: red !important; }
 
-/*keep video without scolling to see controls DONE*/
+/*keep video without scolling to see controls DONE
+
+
+ADD DOMAIN TO GIT HUB
+https://medium.com/employbl/launch-a-website-with-a-custom-url-using-github-pages-and-google-domains-3dd8d90cc33b
+*/
 
 
 
-/*when hover over, black square of opacity .5 with title of project
-extends div and shifts everything down
-
+/*when hover over, black square of opacity .5 with title of project DONE
 behind the popup is white background with a black border logo with title DONE
 find out add script from javascript file instead having it in html page
 */
