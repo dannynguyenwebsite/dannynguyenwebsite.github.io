@@ -61,17 +61,15 @@
 
 
   <div class="container-fluid pl-0 pr-0 pt-0">
-
-
     <div class="row" id="videoP">
       <div class="col-md-12 pl-0 pr-0">
 
         <video autoplay loop muted controls="controls">
           <source src="public/video/M0014506_NAT_Hyundai_MAY18_V4.mp4" type="video/mp4">
-              <source src="public/video/M0014506_NAT_Hyundai_MAY18_V4.ogg" type="video/ogg">
-              <source src="public/video/M0014506_NAT_Hyundai_MAY18_V4.webm" type="video/webm">    
-    
-            </video>
+          <source src="public/video/M0014506_NAT_Hyundai_MAY18_V4.ogg" type="video/ogg">
+          <source src="public/video/M0014506_NAT_Hyundai_MAY18_V4.webm" type="video/webm">
+
+        </video>
       </div>
       <!--end of col-md-12-->
     </div>
@@ -79,8 +77,8 @@
 
     <!--INSTAGRAM SECTION-->
     <div id="aboutme" class="row">
-<P>SOMETHING ABOUT ME</P>
-</div>
+      <P>SOMETHING ABOUT ME</P>
+    </div>
     <!--end of row about me-->
 
 
@@ -451,9 +449,11 @@ take current ID and hard code it into script + this.id
 
       // Get the <span> element that closes the modal
       var span = document.getElementsByClassName("close" + temp)[0];
-
+      modal.onclick = ()=>{
+        modal.style.display = "none";
+      }
       // When the user clicks on <span> (x), close the modal
-      span.onclick = function () {
+      span.onclick = () =>{
         modal.style.display = "none";
       }
     }

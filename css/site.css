@@ -4,14 +4,17 @@
 
 a.nav-link:hover{color: red !important; }
 
-/*keep video without scolling to see controls*/
+/*keep video without scolling to see controls DONE
+
+
+ADD DOMAIN TO GIT HUB
+https://medium.com/employbl/launch-a-website-with-a-custom-url-using-github-pages-and-google-domains-3dd8d90cc33b
+*/
 
 
 
-/*when hover over, black square of opacity .5 with title of project
-extends div and shifts everything down
-
-behind the popup is white background with a black border logo with title
+/*when hover over, black square of opacity .5 with title of project DONE
+behind the popup is white background with a black border logo with title DONE
 find out add script from javascript file instead having it in html page
 */
 
@@ -25,11 +28,11 @@ https://medium.com/@sunilsandhu/the-simplest-way-to-add-your-very-own-custom-ins
 
 /*end of instagram css*/
 
-
  .container-fluid video{
-    width:100%;
-    height:100%;
-     
+    object-fit: fill;
+    height:95vh;
+    min-width: 100%; 
+    min-height: 100%; 
 } 
 .container-fluid{
     overflow: hidden;
@@ -55,8 +58,8 @@ https://medium.com/@sunilsandhu/the-simplest-way-to-add-your-very-own-custom-ins
 #projects{
     padding: 65px;
 }
-
-img {
+/*set curser to change on hover img*/
+.col-md-3.m-1 > img {
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
@@ -67,12 +70,12 @@ img {
     position: absolute;
     top: 50px;
     right: 35px;
-    color: #f1f1f1;
+    color: black;
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
   }
-
+/*set curser to change on hover on close*/
 [class^=close]:hover, [class^=close]:focus {
   color: #bbb;
   text-decoration: none;
@@ -92,7 +95,13 @@ img {
     display: block;
     width: 80%;
     max-width: 700px;
+    border: none;
   }
+
+.col-md-6.modal-content{
+  border: black;
+  border-style: solid;
+}
 
 /* Caption of Modal Image */
 [id^=caption] {
@@ -117,8 +126,8 @@ img {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    background-color: rgb(255,255,255); /* Fallback color */
+    background-color: rgba(255,255,255,0.5); /* Black w/ opacity */
   }
 
   
@@ -140,6 +149,11 @@ img {
         padding-right: 20px;
        
     }
+    .container-fluid video{
+      height: 100%;
+      width: 100%;
+
+  } 
 }
 @media (max-width: 576px){
 
@@ -148,4 +162,9 @@ img {
         padding-right: 20;
       
     }
+    .container-fluid video{
+      height: 100%;
+      width: 100%;
+
+  } 
 }
