@@ -38,6 +38,8 @@ var userFeed = new Instafeed({
 });
 userFeed.run();
 
+//fix this instagram feed with API
+
 //'<div class="col-md-3 m-1"><img onclick="clickTodo(this.id)" id="{{id}}" src="{{image}}" style="width:100%;max-width:300px"><!-- The Modal --><div id="myModal{{id}}" class="modal"><span class="close{{id}}">&times;</span><div class="row"><div class="col-md-6 modal-content"><img class="modal-content" id="img01{{id}}"></div><!--end of col-md-6--><div class="col-md-6 modal-content"><p class="modal-content" id="text{{id}}">{{comments}}<br>{{caption}}</p></div><!--end of col-md-6--><div id="caption{{id}}"></div></div><!--end of row--></div><!--end of myModal--></div><!--end of col-md-3-->',
   
 
