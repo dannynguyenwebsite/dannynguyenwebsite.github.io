@@ -29,8 +29,6 @@ name, follows, and likes
 
 */
 
-
-
 /*end of instagram css*/
 
  .container-fluid video{
@@ -125,7 +123,7 @@ name, follows, and likes
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    padding-top: 200px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
