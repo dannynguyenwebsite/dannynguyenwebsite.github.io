@@ -20,15 +20,60 @@ find out add script from javascript file instead having it in html page
 /*projects, set to filter. if click on filter, remove others and display only. similar to web assignment with cats and dogs*/
 /*live instagram feed
 
-https://medium.com/@sunilsandhu/the-simplest-way-to-add-your-very-own-custom-instagram-feed-to-your-site-c63f129140dc
-set up likes and comments within image. set up css for it
 
-Grid all even for photos
-on click lightbox with picture of left and comments on right
-name, follows, and likes
 
 */
+a>img{
+  width: 300px;
+  height: 200px;
 
+} 
+
+
+.aboutmeContainer {
+  position: relative;
+  text-align: center;
+  color: white;
+  border: white;
+  border-style: solid;
+  
+  
+
+}
+#instafeed{
+  height: 66vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  width: 300px;
+}
+
+
+.fa-heart{
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -45%);
+}
+.fa-comments{
+  position: absolute;
+  top: 60%;
+  left: 46%;
+  transform: translate(-60%, -46%);
+}
+
+
+#like{
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -55%);
+}
+#comment{
+  position: absolute;
+  top: 60%;
+  left: 55%;
+  transform: translate(-60%, -55%);
+}
 /*end of instagram css*/
 
  .container-fluid video{
@@ -51,9 +96,13 @@ name, follows, and likes
 }
 
 #aboutme{
-    padding: 65px;
+    padding-top: 65px;
     padding-left: 80px;
     padding-right: 80px;
+}
+#aboutmeInsta{
+  padding-left: 80px;
+  padding-right: 80px;
 }
 #contactme{
     padding: 65px;
@@ -147,27 +196,43 @@ name, follows, and likes
 
 @media (max-width: 768px){
 
-    #aboutme{
-        padding-left:20px;
+    #aboutme, #aboutmeInsta{
+        padding-left:2px;
         padding-right: 20px;
-       
+        margin-left: 4px;
     }
     .container-fluid video{
       height: 100%;
       width: 100%;
 
+  }
+  #aboutme,#projects,#contactme{
+    padding-top: 20px;
+ 
   } 
+  .modal-content{
+    width: 100%;
+  }
+
 }
 @media (max-width: 576px){
 
-    #aboutme{
-        padding-left: 20;
-        padding-right: 20;
+    #aboutme,#aboutmeInsta{
+        padding-left: 2px;
+        padding-right: 20px;
+        margin-left: 4px;
       
     }
     .container-fluid video{
       height: 100%;
       width: 100%;
 
+  }
+  #aboutme,#projects,#contactme{
+    padding-top: 20px;
   } 
+  .modal-content{
+    width: 100%;
+  }
+
 }

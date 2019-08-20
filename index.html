@@ -22,9 +22,11 @@
     crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-  <!-- instafeed.js -->
-  <script type="text/javascript" src="js/instafeed.min.js"></script>
-  <script type="text/javascript" src="js/instagram.js"></script>
+  <!-- instagram live feed -->
+  <script src="js/instafeed.min.js"></script>
+  <script src="js/instafeed.js"></script>
+  <script src="js/instagramTemp.js"></script>
+  <script src="https://kit.fontawesome.com/f7130001a4.js"></script>
 
   <!-- enable smooth scroll accross browser platforms -->
   <script src="js/smoothScroll.js"></script>
@@ -80,13 +82,16 @@
     <!--end of row videoP-->
 
     <!--INSTAGRAM SECTION-->
-    <div id="aboutme" class="row">
-      <P>SOMETHING ABOUT ME</P>
-
-      <div id="instafeed"></div>
-
-
+    
+    <div id="aboutme" class="row">     
+    <P>SOMETHING ABOUT ME</P>
     </div>
+    <div class="row" id="aboutmeInsta">
+    <div id="instafeed">
+         
+      </div>
+    </div>
+
     <!--end of row about me-->
 
 
@@ -458,8 +463,8 @@
         modal.style.display = "none";
       }
     }
-
-    let url = "https://api.instagram.com/v1/media/{media-id}/comments?access_token=5533940204.a88e61a.6d3eece880a04e0ba45104136145bebb";
+    
+  
   </script>
 
 
