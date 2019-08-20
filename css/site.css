@@ -20,14 +20,15 @@ find out add script from javascript file instead having it in html page
 /*projects, set to filter. if click on filter, remove others and display only. similar to web assignment with cats and dogs*/
 /*live instagram feed
 
-
+Turn it into an interactive photo album
 
 */
 a>img{
   width: 100%;
-  height: 200px;
+  height: auto;
   border: 1px solid #8a4419;
   border-style: inset;
+ 
 
 } 
 
@@ -69,38 +70,43 @@ a>img{
 
 
 #instafeed{
-  height: 100vh;
+  height: 85vh;
   padding-left: 50px;
   width:80vw;
+  overflow-y: scroll;
  
 }
 
 
 .fa-heart{
   position: absolute;
-  top: 50%;
-  left: 45%;
-  transform: translate(-50%, -45%);
+  top: 16%;
+  left: 43%;
+  transform: translate(-16%, -43%);
+  color: white;
 }
 .fa-comments{
   position: absolute;
-  top: 60%;
+  top: 20%;
   left: 46%;
   transform: translate(-60%, -46%);
+  color: white;
 }
 
 
 #like{
   position: absolute;
-  top: 50%;
-  left: 55%;
-  transform: translate(-50%, -55%);
+  top: 16%;
+  left: 52%;
+  transform: translate(-16%, -52%);
+  color: white;
 }
 #comment{
   position: absolute;
-  top: 60%;
+  top: 20%;
   left: 55%;
-  transform: translate(-60%, -55%);
+  transform: translate(-20%, -55%);
+  color: white;
 }
 /*end of instagram css*/
 
