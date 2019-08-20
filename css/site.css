@@ -24,8 +24,10 @@ find out add script from javascript file instead having it in html page
 
 */
 a>img{
-  width: 300px;
+  width: 100%;
   height: 200px;
+  border: 1px solid #8a4419;
+  border-style: inset;
 
 } 
 
@@ -33,18 +35,44 @@ a>img{
 .aboutmeContainer {
   position: relative;
   text-align: center;
-  color: white;
+  color: black;
   border: white;
   border-style: solid;
-  
-  
+  max-width: 17%;
+  padding-left: 0;
+  padding-right: 0;
 
+  
+  position: relative;
+  -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
+  -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  box-shadow: 1px 2px 7px rgba(0, 0, 0, .5);
+  padding: 10px;
+  background: white;
+  
+  
 }
+
+.aboutmeContainer::after{
+  content: '';
+  position: absolute;
+  z-index: -1; /* hide shadow behind image */
+  -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);        
+  width: 70%; 
+  left: 15%; /* one half of the remaining 30% */
+  height: 100px;
+  bottom: 0;
+}
+
+
+
 #instafeed{
-  height: 66vh;
-  overflow: scroll;
-  overflow-x: hidden;
-  width: 300px;
+  height: 100vh;
+  padding-left: 50px;
+  width:80vw;
+ 
 }
 
 
