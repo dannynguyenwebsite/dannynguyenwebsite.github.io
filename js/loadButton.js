@@ -6,9 +6,11 @@ $(document).ready(function () {
     $("#loadMore").on('click', function (e) {
         e.preventDefault();
         $(".aboutmeContainer:hidden").slice(0, 6).slideDown();
-        if ($(".aboutmeContainer:hidden").length == 0) {
-            $("#loadMore").fadeOut('slow');
-        }
+
+    });
+    $("#loadLess").on('click', function (e) {
+        e.preventDefault();
+        $(".aboutmeContainer:visible").slice(-6).slideUp();
     });
 
 });
