@@ -22,6 +22,7 @@ find out add script from javascript file instead having it in html page
 
 Have images onload to display 3x3 DONE
 load more button DONE
+load less button DONE
 
 */
 
@@ -44,9 +45,6 @@ a>img{
   padding-right: 0;/*removed padding*/
   display: none; /*set to none for loadButton*/
 }
-
-
-
 
 /*instafeed container where images get rendered*/
 #instafeed{
