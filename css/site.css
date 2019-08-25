@@ -20,25 +20,98 @@ find out add script from javascript file instead having it in html page
 /*projects, set to filter. if click on filter, remove others and display only. similar to web assignment with cats and dogs*/
 /*live instagram feed
 
-https://medium.com/@sunilsandhu/the-simplest-way-to-add-your-very-own-custom-instagram-feed-to-your-site-c63f129140dc
-set up likes and comments within image. set up css for it
-
-Grid all even for photos
-on click lightbox with picture of left and comments on right
-name, follows, and likes
+Have images onload to display 3x3 DONE
+load more button DONE
 
 */
+
+
+
+/*image width and height*/
+a>img{
+  width: 100%;/*set to fit aboutmeContainer div*/
+  height: 170px;/*height of image*/
+} 
+
+/*div container and set to display none for load more button*/
+.aboutmeContainer {
+  position: relative;/*set position based on parent div*/
+  text-align: center;/*centered around parent div*/
+  border: white;/*set border around image container*/
+  border-style: solid;/*border style*/
+  max-width: 17%;/*limit to width not go passed 17%*/
+  padding-left: 0;/*removed padding*/
+  padding-right: 0;/*removed padding*/
+  display: none; /*set to none for loadButton*/
+}
+
+
+
+
+/*instafeed container where images get rendered*/
+#instafeed{
+  height: 100%;/*used % instead of vh to push elements down once load more button is pressed*/
+  padding-left: 50px;/*set padding*/
+  width:40vw;/*set for instagram feed to take up only 40% of viewport*/
+   
+ 
+}
+
+/*like icon*/
+.fa-heart{
+  position: absolute;/*position is set to specific to be in middle of image*/
+  top: 40%;/*40% from the top of image element*/
+  left: 43%;/*43% to left of image element*/
+  transform: translate(-40%, -43%);/**/
+  color: white;/**/
+}
+/*comment icon*/
+.fa-comments{
+  position: absolute;/**/
+  top: 51%;/**/
+  left: 44%;/**/
+  transform: translate(-51%, -44%);/**/
+  color: white;/**/
+}
+
+/*like string to match with like icon in middle of image*/
+#like{
+  position: absolute;/**/
+  top: 40%;/**/
+  left: 54%;/**/
+  transform: translate(-40%, -54%);/**/
+  color: white;/**/
+}
+
+/*like string to match with like icon in middle of image*/
+#comment{
+  position: absolute;/**/
+  top: 51%;/**/
+  left: 53%;/**/
+  transform: translate(-51%, -53%);/**/
+  color: white;/**/
+}
+
+.btn-success:focus{
+  outline: none !important;
+  box-shadow: none !important;
+}
+.btn-danger:focus{
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 
 /*end of instagram css*/
 
  .container-fluid video{
-    object-fit: fill;
-    height:95vh;
-    min-width: 100%; 
-    min-height: 100%; 
+    object-fit: fill;/**/
+    height:95vh;/**/
+    min-width: 100%; /**/
+    min-height: 100%; /**/
 } 
 .container-fluid{
-    overflow: hidden;
+    overflow: hidden;/**/
 
  }
  
@@ -51,10 +124,11 @@ name, follows, and likes
 }
 
 #aboutme{
-    padding: 65px;
+    padding-top: 65px;
     padding-left: 80px;
     padding-right: 80px;
 }
+
 #contactme{
     padding: 65px;
 }
@@ -144,30 +218,81 @@ name, follows, and likes
     to {transform:scale(1)}
   }
 
-
-@media (max-width: 768px){
-
-    #aboutme{
-        padding-left:20px;
-        padding-right: 20px;
-       
+  @media (min-width: 1200px) { 
+    .aboutmeContainer{
+      max-width: 70%;
     }
-    .container-fluid video{
-      height: 100%;
-      width: 100%;
-
-  } 
-}
-@media (max-width: 576px){
-
-    #aboutme{
-        padding-left: 20;
-        padding-right: 20;
+    .aboutmeContainer::after{
+      content: '';
+      position: absolute;
+      z-index: -1;
+      -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+     
+      width: 70%; 
+      left: 15%; 
+      height: 100px;
+      bottom: 0;
       
     }
+    .aboutmeContainer {  
+      /*background box*/
+      -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
+      -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+      box-shadow: 1px 2px 7px rgba(0, 0, 0, .5);
+      padding: 10px;
+      background: white;   
+    }
+
+  }
+
+@media (max-width: 768px){
+    #aboutme{
+        padding-left:2px;
+        padding-right: 20px;
+        margin-left: 4px;
+    }
     .container-fluid video{
       height: 100%;
       width: 100%;
 
-  } 
+    }
+    #aboutme,#projects,#contactme{
+        padding-top: 20px;
+    } 
+    .modal-content{
+        width: 100%;
+    }
+    .aboutmeContainer{
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 576px){
+    #aboutme{
+        padding-left: 2px;
+        padding-right: 20px;
+        margin-left: 4px;      
+    }
+    .container-fluid video{
+        height: 100%;
+        width: 100%;
+    }
+    #aboutme,#projects,#contactme{
+        padding-top: 20px;
+    } 
+    .modal-content{
+        width: 100%;
+    }
+    #instafeed{
+        padding-left: 35px;
+    }
+    .aboutmeContainer{
+        min-width: 100vw;
+        padding-right: 40px;
+    }
+    a>img{
+        width:100%;
+    }
 }
