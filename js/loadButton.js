@@ -1,28 +1,14 @@
-$(function () {
-    $("div").slice(0, 4).show();
+$(document).ready(function () {
+    $(".aboutmeContainer").slice(0, 9).show();
+    if ($(".aboutmeContainer:hidden").length != 0) {
+        $("#loadMore").show();
+    }		
     $("#loadMore").on('click', function (e) {
         e.preventDefault();
-        $("div:hidden").slice(0, 4).slideDown();
-        if ($("div:hidden").length == 0) {
-            $("#load").fadeOut('slow');
+        $(".aboutmeContainer:hidden").slice(0, 6).slideDown();
+        if ($(".aboutmeContainer:hidden").length == 0) {
+            $("#loadMore").fadeOut('slow');
         }
-        $('html,body').animate({
-            scrollTop: $(this).offset().top
-        }, 1500);
     });
-});
 
-$('a[href=#top]').click(function () {
-    $('body,html').animate({
-        scrollTop: 0
-    }, 600);
-    return false;
-});
-
-$(window).scroll(function () {
-    if ($(this).scrollTop() > 50) {
-        $('.totop a').fadeIn();
-    } else {
-        $('.totop a').fadeOut();
-    }
 });
