@@ -17,15 +17,45 @@ https://medium.com/employbl/launch-a-website-with-a-custom-url-using-github-page
 behind the popup is white background with a black border logo with title DONE
 find out add script from javascript file instead having it in html page
 */
-/*projects, set to filter. if click on filter, remove others and display only. similar to web assignment with cats and dogs*/
+/*projects, set to filter. if click on filter, remove others and display only. similar to web assignment with cats and dogs DONE*/
 /*live instagram feed
 
 Have images onload to display 3x3 DONE
 load more button DONE
 load less button DONE
 
+add animation to the projects section when filtering CHECK BACK IN AFTER
+
 */
 
+/*Navbar/filter for projects*/
+div ul {
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  margin: 0 0 0 -12px;
+  padding:0px;
+}
+
+div ul li {
+  float: left;
+}
+
+div ul li a {
+  padding: 10px 12px 13px 12px;
+ 
+  
+  display: block;
+  line-height: 40px;
+  font: 95% Tahoma, sans-serif;
+  color: #ddd;
+  text-decoration: none;
+}
+
+div ul li a:hover{
+  color: #fff;
+  cursor:pointer;
+}
 
 
 /*image width and height*/
@@ -58,40 +88,6 @@ a>img{
  
 }
 
-/*like icon*/
-.fa-heart{
-  position: absolute;/*position is set to specific to be in middle of image*/
-  top: 40%;/*40% from the top of image element*/
-  left: 43%;/*43% to left of image element*/
-  transform: translate(-40%, -43%);/**/
-  color: white;/**/
-}
-/*comment icon*/
-.fa-comments{
-  position: absolute;/**/
-  top: 51%;/**/
-  left: 44%;/**/
-  transform: translate(-51%, -44%);/**/
-  color: white;/**/
-}
-
-/*like string to match with like icon in middle of image*/
-#like{
-  position: absolute;/**/
-  top: 40%;/**/
-  left: 54%;/**/
-  transform: translate(-40%, -54%);/**/
-  color: white;/**/
-}
-
-/*like string to match with like icon in middle of image*/
-#comment{
-  position: absolute;/**/
-  top: 51%;/**/
-  left: 53%;/**/
-  transform: translate(-51%, -53%);/**/
-  color: white;/**/
-}
 
 .btn-success:focus{
   outline: none !important;
@@ -134,7 +130,7 @@ a>img{
     padding: 65px;
 }
 #projects{
-    padding: 65px;
+    padding-top: 65px;
 }
 /*set curser to change on hover img*/
 .col-md-3.m-1 > img {
@@ -201,6 +197,39 @@ a>img{
     background-color: rgb(255,255,255); /* Fallback color */
     background-color: rgba(255,255,255,0.5); /* Black w/ opacity */
   }
+/*hover effect for instagram*/
+a>img {
+  opacity: 1;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.aboutmeContainer:hover a>img {
+  opacity: 0.3;
+}
+
+.aboutmeContainer:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: grey;
+  color: white;
+  font-size: 10px;
+  padding: 16px 32px;
+}
 
   
   @-webkit-keyframes zoom {

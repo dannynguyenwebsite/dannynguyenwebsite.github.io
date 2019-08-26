@@ -12,5 +12,6 @@ $(document).ready(function () {
         e.preventDefault();
         $(".aboutmeContainer:visible").slice(-8).slideUp();
     });
-
 });
+
+

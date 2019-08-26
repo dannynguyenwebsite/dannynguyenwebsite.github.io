@@ -1,24 +1,17 @@
-
+let filter="";
 
 window.onload = () => {
     loadTable();
 
 }
 
-
-
-
-
 function loadTable() {
-    // Get the modal
+    let projectDiv = document.getElementById("project");
+    projectDiv.innerHTML = "";
     for (let i = 0; i < data.length; ++i) {
-        
-        let projectDiv = document.getElementById("projects");
-        
-        //CREATE IF STATEMENT FOR FILTER HERE
-        
+        if(filter == "" || filter == data[i].type){      
         let columnDiv = document.createElement("div");
-        columnDiv.setAttribute("class", "col-md-3 m-1");
+        columnDiv.setAttribute("class", "col-md-3 m-1 "+data[i].image.class);
         columnDiv.setAttribute("style", "background-color: grey;");
         projectDiv.appendChild(columnDiv);
         let image = document.createElement("img");
@@ -26,9 +19,7 @@ function loadTable() {
         image.setAttribute("src", data[i].image.src);
         image.setAttribute("alt", data[i].image.alt);
         image.setAttribute("style", data[i].image.style);
-        //image.onclick = function () { clickToDo(this.id); };
-        //image.addEventListener("click", clickToDo.bind(null, this.id));
-        image.setAttribute("onclick", "clickTodo(this.id);")
+        image.onclick = function () { clickTodo(this.id); };
         columnDiv.appendChild(image);
         let myModal = document.createElement("div");
         myModal.setAttribute("id", "myModal" + i);
@@ -60,8 +51,30 @@ function loadTable() {
         modalContentDescription.appendChild(modalContentP);
         let caption = document.createElement("div");
         caption.setAttribute("id", "caption" + i);
-
+        }
     }
-
-
+}
+function filterJS(){
+    filter = "javascript";
+    loadTable();
+} 
+function filterGraphic(){
+    filter = "graphic";
+    loadTable();
+}
+function filterhtml(){
+    filter="html"; 
+    loadTable();
+}
+function filterCode(){
+    filter = "code";
+    loadTable();
+}
+function filterMobile(){
+    filter="mobile";
+    loadTable();
+}
+function filterAll(){
+    filter="";   
+    loadTable();
 }
