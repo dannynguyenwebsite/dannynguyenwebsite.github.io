@@ -34,6 +34,11 @@
   <!-- enable smooth scroll accross browser platforms -->
   <script src="js/smoothScroll.js"></script>
 
+  <!-- projects table -->
+  <script src="js/data.js"></script>
+  <script src="js/loadProject.js"></script>
+
+
 
   <link rel="stylesheet" href="css/normalization.css">
   <link rel="stylesheet" href="css/site.css">
@@ -93,250 +98,32 @@
     <div id="instafeed" class="row">
          
       </div>
+      <div class="row" style="padding-left: 50px;">
       <button class="btn btn-success" id="loadMore" style="margin-top: 20px;">Load More</button>
       <button class="btn btn-danger" id="loadLess" style="margin-top: 20px;">Load Less</button> 
-
+    </div>
     <!-- </div> -->
 
     <!--end of row about me-->
+    <!-- PROJECT DIV BEGINS -->
+    <div class="navbar navbar-expand-lg navbar-light bg-white" id="projects" style="border-bottom-style: none;">
+ 
+        <div class="collapse navbar-collapse" id="navbarNavs" style="display: block; margin-left: 30vw;">
+      <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" onclick="filterAll('all')" id="allprojects">All Projects</a></li>
+          <li class="nav-item"><a class="nav-link" onclick="filterJS()" id="javascript">Javascript</a></li>
+          <li class="nav-item"><a class="nav-link" onclick="filterGraphic()" id="graphic">Graphic Design</a></li>
+          <li class="nav-item"><a class="nav-link" onclick="filterhtml()" id="html">HTML</a></li>
+          <li class="nav-item"><a class="nav-link" onclick="filterCode()" id="code">Code</a></li>
+          <li class="nav-item"><a class="nav-link" onclick="filterMobile()" id="mobile">Mobile Applications</a></li>
 
-
-    <div id="projects" class="row justify-content-center">
-      <div class="col-md-3 m-1" style="background-color: red;">
-        <img onclick="clickTodo(this.id)" id="1" src="public/images/2019_WEB_LOGO.png" alt="Snow"
-          style="width:100%;max-width:300px">
-        <!-- The Modal -->
-        <div id="myModal1" class="modal">
-          <span class="close1">&times;</span>
-          <div class="row">
-            <div class="col-md-6 modal-content">
-              <img class="modal-content" id="img011">
-            </div>
-            <!--end of col-md-6-->
-            <div class="col-md-6 modal-content">
-              <p class="modal-content" id="text011">Pellentesque habitant morbi tristique senectus et netus et malesuada
-                fames ac turpis egestas.</p>
-            </div>
-            <!--end of col-md-6-->
-            <div id="caption1"></div>
-          </div>
-          <!--end of row-->
-        </div>
-        <!--end of myModal-->
-      </div>
-      <!--end of col-md-3-->
-
-
-      <div class="col-md-3 m-1" style="background-color: black;">
-        <img onclick="clickTodo(this.id)" id="2" src="public/images/2019_WEB_LOGO.png" alt="Snow"
-          style="width:100%;max-width:300px">
-        <!-- The Modal -->
-        <div id="myModal2" class="modal">
-          <span class="close2">&times;</span>
-          <div class="row">
-            <div class="col-md-6 modal-content">
-              <img class="modal-content" id="img012">
-            </div>
-            <!--end of col-md-6-->
-            <div class="col-md-6 modal-content">
-              <p class="modal-content" id="text012">Pellentesque habitant morbi tristique senectus et netus et malesuada
-                fames ac turpis egestas.</p>
-            </div>
-            <!--end of col-md-6-->
-            <div id="caption2"></div>
-          </div>
-          <!--end of row-->
-        </div>
-        <!--end of myModal-->
-
-      </div>
-      <div class="col-md-3 m-1" style="background-color: blue;">
-        <img onclick="clickTodo(this.id)" id="3" src="public/images/2019_WEB_LOGO.png" alt="Snow"
-          style="width:100%;max-width:300px">
-        <!-- The Modal -->
-        <div id="myModal3" class="modal">
-          <span class="close3">&times;</span>
-          <div class="row">
-            <div class="col-md-6 modal-content">
-              <img class="modal-content" id="img013">
-            </div>
-            <!--end of col-md-6-->
-            <div class="col-md-6 modal-content">
-              <p class="modal-content" id="text013">Pellentesque habitant morbi tristique senectus et netus et malesuada
-                fames ac turpis egestas.</p>
-            </div>
-            <!--end of col-md-6-->
-            <div id="caption3"></div>
-          </div>
-          <!--end of row-->
-        </div>
-        <!--end of myModal-->
-
-      </div>
-
-
-      <div class="col-md-3 m-1" style="background-color: orange;">
-        <img onclick="clickTodo(this.id)" id="4" src="public/images/2019_WEB_LOGO.png" alt="Snow"
-          style="width:100%;max-width:300px">
-        <!-- The Modal -->
-        <div id="myModal4" class="modal">
-          <span class="close4">&times;</span>
-          <div class="row">
-            <div class="col-md-6 modal-content">
-              <img class="modal-content" id="img014">
-            </div>
-            <!--end of col-md-6-->
-            <div class="col-md-6 modal-content">
-              <p class="modal-content" id="text014">Pellentesque habitant morbi tristique senectus et netus et malesuada
-                fames ac turpis egestas.</p>
-            </div>
-            <!--end of col-md-6-->
-            <div id="caption4"></div>
-          </div>
-          <!--end of row-->
-        </div>
-        <!--end of myModal-->
-
-
-      </div>
-
-
-
-      <div class="col-md-3 m-1" style="background-color: yellow;">
-        <img onclick="clickTodo(this.id)" id="5" src="public/images/2019_WEB_LOGO.png" alt="Snow"
-          style="width:100%;max-width:300px">
-        <!-- The Modal -->
-        <div id="myModal5" class="modal">
-          <span class="close5">&times;</span>
-          <div class="row">
-            <div class="col-md-6 modal-content">
-              <img class="modal-content" id="img015">
-            </div>
-            <!--end of col-md-6-->
-            <div class="col-md-6 modal-content">
-              <p class="modal-content" id="text015">Pellentesque habitant morbi tristique senectus et netus et malesuada
-                fames ac turpis egestas.</p>
-            </div>
-            <!--end of col-md-6-->
-            <div id="caption5"></div>
-          </div>
-          <!--end of row-->
-        </div>
-        <!--end of myModal-->
-      </div>
-      <div class="col-md-3 m-1" style="background-color: grey;">
-        <img onclick="clickTodo(this.id)" id="6" src="public/images/2019_WEB_LOGO.png" alt="Snow"
-          style="width:100%;max-width:300px">
-        <!-- The Modal -->
-        <div id="myModal6" class="modal">
-          <span class="close6">&times;</span>
-          <div class="row">
-            <div class="col-md-6 modal-content">
-              <img class="modal-content" id="img016">
-            </div>
-            <!--end of col-md-6-->
-            <div class="col-md-6 modal-content">
-              <p class="modal-content" id="text016">Pellentesque habitant morbi tristique senectus et netus et malesuada
-                fames ac turpis egestas.</p>
-            </div>
-            <!--end of col-md-6-->
-            <div id="caption6"></div>
-          </div>
-          <!--end of row-->
-        </div>
-        <!--end of myModal-->
-      </div>
-      <div class="col-md-3 m-1" style="background-color: purple;">
-        <img onclick="clickTodo(this.id)" id="7" src="public/images/2019_WEB_LOGO.png" alt="Snow"
-          style="width:100%;max-width:300px">
-        <!-- The Modal -->
-        <div id="myModal7" class="modal">
-          <span class="close7">&times;</span>
-          <div class="row">
-            <div class="col-md-6 modal-content">
-              <img class="modal-content" id="img017">
-            </div>
-            <!--end of col-md-6-->
-            <div class="col-md-6 modal-content">
-              <p class="modal-content" id="text017">Pellentesque habitant morbi tristique senectus et netus et malesuada
-                fames ac turpis egestas.</p>
-            </div>
-            <!--end of col-md-6-->
-            <div id="caption7"></div>
-          </div>
-          <!--end of row-->
-        </div>
-        <!--end of myModal-->
-      </div>
-      <div class="col-md-3 m-1" style="background-color: cyan;">
-        <img onclick="clickTodo(this.id)" id="8" src="public/images/2019_WEB_LOGO.png" alt="Snow"
-          style="width:100%;max-width:300px">
-        <!-- The Modal -->
-        <div id="myModal8" class="modal">
-          <span class="close8">&times;</span>
-          <div class="row">
-            <div class="col-md-6 modal-content">
-              <img class="modal-content" id="img018">
-            </div>
-            <!--end of col-md-6-->
-            <div class="col-md-6 modal-content">
-              <p class="modal-content" id="text018">Pellentesque habitant morbi tristique senectus et netus et malesuada
-                fames ac turpis egestas.</p>
-            </div>
-            <!--end of col-md-6-->
-            <div id="caption8"></div>
-          </div>
-          <!--end of row-->
-        </div>
-        <!--end of myModal-->
-      </div>
-      <div class="col-md-3 m-1" style="background-color: gold;">
-        <img onclick="clickTodo(this.id)" id="9" src="public/images/2019_WEB_LOGO.png" alt="Snow"
-          style="width:100%;max-width:300px">
-        <!-- The Modal -->
-        <div id="myModal9" class="modal">
-          <span class="close9">&times;</span>
-          <div class="row">
-            <div class="col-md-6 modal-content">
-              <img class="modal-content" id="img019">
-            </div>
-            <!--end of col-md-6-->
-            <div class="col-md-6 modal-content">
-              <p class="modal-content" id="text019">Pellentesque habitant morbi tristique senectus et netus et malesuada
-                fames ac turpis egestas.</p>
-            </div>
-            <!--end of col-md-6-->
-            <div id="caption9"></div>
-          </div>
-          <!--end of row-->
-        </div>
-        <!--end of myModal-->
-      </div>
-      <div class="col-md-3 m-1" style="background-color: silver;">
-        <img onclick="clickTodo(this.id)" id="10" src="public/images/2019_WEB_LOGO.png" alt="Snow"
-          style="width:100%;max-width:300px">
-        <!-- The Modal -->
-        <div id="myModal10" class="modal">
-          <span class="close10">&times;</span>
-          <div class="row">
-            <div class="col-md-6 modal-content">
-              <img class="modal-content" id="img0110">
-            </div>
-            <!--end of col-md-6-->
-            <div class="col-md-6 modal-content">
-              <p class="modal-content" id="text0110">Pellentesque habitant morbi tristique senectus et netus et
-                malesuada
-                fames ac turpis egestas.</p>
-            </div>
-            <!--end of col-md-6-->
-            <div id="caption10"></div>
-          </div>
-          <!--end of row-->
-        </div>
-        <!--end of myModal-->
-      </div>
+      </ul>
     </div>
-    <!--end of row about me-->
+  </div>
+    <div id="project" class="row justify-content-center">
+
+
+    </div><!-- end of div project -->
 
     <div id="contactme" class="row">
       <div class="col-md-12">
@@ -440,38 +227,34 @@
   </div>
   <!--end of container-fluid-->
 
-
-
-
-  <script>
-    // Get the modal
-    function clickTodo(temp) {
-      //returns the first myModal, so wont work on elements with the id that is below the first
-      var modal = document.getElementById('myModal' + temp);
-
-      // Get the image and insert it inside the modal - use its "alt" text as a caption
-      var img = document.getElementById(temp);
-      var modalImg = document.getElementById("img01" + temp);
-      var text = document.getElementById("text01" + temp);
-      var captionText = document.getElementById("caption" + temp);
-      modal.style.display = "block";
-
-      modalImg.src = img.src;
-      captionText.innerHTML = img.alt;
-
-      // Get the <span> element that closes the modal
-      var span = document.getElementsByClassName("close" + temp)[0];
-      modal.onclick = () => {
-        modal.style.display = "none";
+<script>
+      // Get the modal
+      function clickTodo(temp) {
+        //returns the first myModal, so wont work on elements with the id that is below the first
+        var modal = document.getElementById('myModal' + temp);
+        console.log(temp);
+      
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById(temp);
+        var modalImg = document.getElementById("img01" + temp);
+        var text = document.getElementById("text01" + temp);
+        var captionText = document.getElementById("caption" + temp);
+        modal.style.display = "block";
+      
+        modalImg.src = img.src;
+      
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close" + temp)[0];
+        modal.onclick = () => {
+          modal.style.display = "none";
+        }
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = () => {
+          modal.style.display = "none";
+        }
       }
-      // When the user clicks on <span> (x), close the modal
-      span.onclick = () => {
-        modal.style.display = "none";
-      }
-    }
-    
-  
-  </script>
+</script>
+
 
 
 
