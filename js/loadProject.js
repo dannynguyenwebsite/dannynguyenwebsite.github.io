@@ -49,8 +49,6 @@ function loadTable() {
         let modalContentText = document.createTextNode("Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.");
         modalContentP.appendChild(modalContentText);
         modalContentDescription.appendChild(modalContentP);
-        let caption = document.createElement("div");
-        caption.setAttribute("id", "caption" + i);
         }
     }
 }

@@ -24,9 +24,12 @@ Have images onload to display 3x3 DONE
 load more button DONE
 load less button DONE
 
-add animation to the projects section when filtering CHECK BACK IN AFTER
+add animation to the projects section when filtering CHECK BACK IN AFTER with SHUFFLE
 
 */
+
+
+
 
 /*Navbar/filter for projects*/
 div ul {
@@ -289,7 +292,7 @@ a>img {
         width: 100%;
     }
     .aboutmeContainer{
-        max-width: 100%;
+        max-width: 50%;
     }
 }
 
@@ -313,7 +316,7 @@ a>img {
         padding-left: 35px;
     }
     .aboutmeContainer{
-        min-width: 100vw;
+        min-width: 80vw;
         padding-right: 40px;
     }
     a>img{
